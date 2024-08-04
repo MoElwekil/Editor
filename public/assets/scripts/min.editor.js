@@ -6,7 +6,7 @@ if(editorToolbarButtons != null && editorToolbarButtons.length > 0){
         button.addEventListener('click', (e) => {
             e.preventDefault();
             const tagValue = e.target.parentElement.id;
-            debugger;
+
             if(tagValue == 'bold'){
                 // bold
                 return applyHTMLTag('editor', 'editor_example', 'b')
