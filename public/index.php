@@ -23,6 +23,7 @@
             <button class="editor_toolbar_button" id="h4"><h4 class="rsa">H4</h4></button>
             <button class="editor_toolbar_button" id="h5"><h5 class="rsa">H5</h5></button>
             <button class="editor_toolbar_button" id="h6"><h6 class="rsa">H6</h6></button>
+            <button class="editor_toolbar_button" id="url"><h6 class="rsa">Add Url</h6></button>
 
         </div>
         <form action="">
