@@ -40,6 +40,7 @@ function browserSyncReload(done) {
 function php() {
 	return gulp.src('src/**/*.php').pipe(gulp.dest('./public'))
 }
+php();
 
 function css() {
 	return gulp.src("src/assets/styles/**/*.scss")
@@ -57,8 +58,8 @@ function scripts() {
 	return (
 		gulp
 			.src(["./src/assets/scripts/**/*"])
-			.pipe(plumber())
-			.pipe(uglify())
+			// .pipe(plumber())
+			// .pipe(uglify())
 			.pipe(concat('min.editor.js'))
 			.pipe(gulp.dest("./public/assets/scripts/"))
 			.pipe(browserSync.stream())
@@ -72,6 +73,7 @@ function images() {
 		.src("src/assets/images/**/*")
 		.pipe(gulp.dest("public/assets/images/"));
 }
+images();
 
 // Watch files
 function watchFiles() {
