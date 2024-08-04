@@ -26,7 +26,7 @@
 
         </div>
         <form action="">
-            <textarea id="editor"></textarea>
+            <textarea id="editor">hello world</textarea>
         </form>
 
         <div id="editor_example"></div>

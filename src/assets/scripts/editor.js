@@ -93,3 +93,15 @@ function editorFunction(editorId, htmlTag){
         return selectedParagraph = editor.value.substring(start, end);
     }
 }
+
+function displayReview(editorId, editorExampleID){
+    if(document.getElementById(editorId) != null){
+        const editor = document.getElementById(editorId);
+        const editorExample = document.getElementById(editorExampleID);
+        editorExample.innerHTML = editor.value;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    return displayReview('editor', 'editor_example')
+})
