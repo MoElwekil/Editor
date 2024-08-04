@@ -58,8 +58,8 @@ function scripts() {
 	return (
 		gulp
 			.src(["./src/assets/scripts/**/*"])
-			// .pipe(plumber())
-			// .pipe(uglify())
+			.pipe(plumber())
+			.pipe(uglify())
 			.pipe(concat('min.editor.js'))
 			.pipe(gulp.dest("./public/assets/scripts/"))
 			.pipe(browserSync.stream())
