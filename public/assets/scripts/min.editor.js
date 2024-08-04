@@ -17,9 +17,14 @@ if(editorToolbarButtons != null && editorToolbarButtons.length > 0){
                 return applyHTMLTag('editor', 'editor_example', 'i')
             }
 
-            if(tagValue == 'li'){
+            if(tagValue == 'ul'){
                 // list
-                return applyHTMLTag('editor', 'editor_example', 'li')
+                return applyHTMLTag('editor', 'editor_example', 'ul')
+            }
+
+            if(tagValue == 'ol'){
+                // list
+                return applyHTMLTag('editor', 'editor_example', 'ol')
             }
 
             if(tagValue == 'p'){
@@ -54,11 +59,28 @@ if(editorToolbarButtons != null && editorToolbarButtons.length > 0){
 }
 
 function applyHTMLTag(editorID, editorExampleID, htmlTag){
+    let finalTextVersion = '';
     const selectedParagraph = editorFunction(editorID);
     const editorIDElement = document.getElementById(editorID);
     const editorExampleIDElement = document.getElementById(editorExampleID);
 
-    const finalTextVersion = editorIDElement.value.replace(selectedParagraph, `<${htmlTag}>${selectedParagraph}</${htmlTag}>` );
+    if(htmlTag == 'ul' || htmlTag == 'ol'){
+        // check if each paragraph is in another line or not
+        // if each paragraph is in a new line, add multiple li tags
+        var lines = selectedParagraph.split('\n');
+        debugger;
+        // warp the list
+        let result  = `<${htmlTag}>\n`;
+        for(let i = 0; i < lines.length; i++){
+            result += `<li>${lines[i]}</li>\n`;
+        }
+        result += `</${htmlTag}>`
+
+        finalTextVersion = editorIDElement.value.replace(selectedParagraph, `${result}` );
+    }else{
+        finalTextVersion = editorIDElement.value.replace(selectedParagraph, `<${htmlTag}>${selectedParagraph}</${htmlTag}>` );
+    }
+
     editorIDElement.value = finalTextVersion;
     editorExampleIDElement.innerHTML = finalTextVersion;
 }

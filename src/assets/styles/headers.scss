@@ -7,3 +7,20 @@ h1, h2, h3, h4, h5, h6, p {
         font-weight: normal;
     }
 }
+
+ul, ol {
+    &.rsa {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        padding-inline-start: 0;
+        list-style: inside;
+    }
+}
+
+li {
+    &.rsa {
+        list-style: none;
+    }
+}

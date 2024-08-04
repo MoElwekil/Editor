@@ -15,7 +15,8 @@
             <button class="editor_toolbar_button" id="p"><p class="rsa">Paragraph</p></button>
             <button class="editor_toolbar_button" id="bold"><b>Bold text</b></button>
             <button class="editor_toolbar_button" id="italic"><i>Italic text</i></button>
-            <button class="editor_toolbar_button" id="li"><li>List</li></button>
+            <button class="editor_toolbar_button" id="ul"><li class="rsa">List</ul></button>
+            <button class="editor_toolbar_button" id="ol"><li class="rsa">Ordered List</ol></button>
             <button class="editor_toolbar_button" id="h1"><h1 class="rsa">H1</h1></button>
             <button class="editor_toolbar_button" id="h2"><h2 class="rsa">H2</h2></button>
             <button class="editor_toolbar_button" id="h3"><h3 class="rsa">H3</h3></button>
